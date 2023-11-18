@@ -1,6 +1,7 @@
 body {
   background-color: rgb(34, 35, 40);
   color: white;
+  font-family: "Montserrat", sans-serif;
 }
 
 .container-md {
@@ -233,6 +234,42 @@ footer a:hover {
   font-family: "Montserrat", sans-serif;
   font-size: 35px;
   color: white;
+}
+
+@media screen and (max-width: 1200px) {
+  .container-md,
+  .content-container,
+  .skills-section,
+  .card-container {
+    margin-right: 10px;
+    margin-left: 10px;
+  }
+  .presentation-section,
+  .skill-row,
+  .city-card {
+    flex-direction: column;
+  }
+}
+@media screen and (max-width: 768px) {
+  .presentation-text,
+  .presentation-text-developer {
+    font-size: 30px;
+  }
+  .skill-icon {
+    width: 80px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .mb-3,
+  .btn-primary,
+  .form-title {
+    margin-left: 20px;
+    width: auto;
+  }
+  .presentation-text,
+  .presentation-text-developer {
+    font-size: 25px;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */
