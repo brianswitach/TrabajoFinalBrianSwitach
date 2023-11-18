@@ -1,0 +1,272 @@
+body {
+    background-color: rgb(34, 35, 40);
+    color: white;
+}
+
+.container-md {
+    margin-top: 20px;
+    margin-right: 200px;
+}
+
+.content-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 60px 200px;
+}
+
+.presentation-section {
+    flex: 1;
+}
+
+.presentation-text {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 45px;
+    color: white;
+    margin-top: 60px;
+}
+
+.presentation-text-developer {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 45px;
+    color: rgb(255, 125, 80);
+    margin-top: 60px;
+}
+
+.typing-demo {
+    font-family: 'Montserrat', sans-serif;
+    animation: typing 7s steps(16) infinite, blink-caret .75s step-end infinite;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 3px solid white;
+    font-size: 1em;
+    width: 22ch;
+}
+
+@keyframes typing {
+    0%, 100% { width: 0; }
+    10%, 30% { width: 16ch; }
+    40%, 60% { width: 16ch; }
+    70%, 90% { width: 16ch; }
+}
+
+@keyframes blink-caret {
+    50% { border-color: transparent; }
+}
+
+.paboutme {
+    margin-top: 40px;
+    font-family: 'Montserrat', sans-serif;
+    width: calc(50% - 40px);
+    font-size: 20px;
+    color: #fff;
+    margin-left: 40px;
+}
+
+.skills-title {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 35px;
+    color: white;
+    margin-bottom: 50px;
+}
+
+.skills-section {
+    margin: 150px 0;
+    text-align: center;
+}
+
+.skill-row {
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 20px;
+}
+
+.skill-icon-container {
+    position: relative;
+    display: inline-block;
+    margin: 20px 10px;
+    border: 3px solid #53B4DF;
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.6);
+    transition: all 0.3s ease;
+    opacity: 0; /* Inicialmente oculto */
+}
+
+.skill-icon {
+    width: 100px;
+    height: auto;
+}
+
+.icon-title {
+    position: absolute;
+    bottom: -20px;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    color: #ffffff;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    opacity: 0;
+    transition: opacity 0.3s ease, bottom 0.3s ease;
+    pointer-events: none;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 5px 0;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.skill-icon-container:hover .icon-title {
+    opacity: 1;
+    bottom: 10px;
+}
+
+.skill-icon-container:hover {
+    transform: translateY(-20px);
+}
+
+@keyframes slideFromLeft {
+    from { transform: translateX(-100%); opacity: 0; }
+    to { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes slideFromRight {
+    from { transform: translateX(100%); opacity: 0; }
+    to { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes slideFromTop {
+    from { transform: translateY(-100%); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes slideFromBottom {
+    from { transform: translateY(100%); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+.animate-from-left {
+    animation: slideFromLeft 0.5s forwards;
+}
+
+.animate-from-right {
+    animation: slideFromRight 0.5s forwards;
+}
+
+.animate-from-top {
+    animation: slideFromTop 0.5s forwards;
+}
+
+.animate-from-bottom {
+    animation: slideFromBottom 0.5s forwards;
+}
+.card-container {
+    display: flex;
+    justify-content: flex-start; 
+    align-items: flex-start; 
+    padding: 20px;
+    height: 100vh; /* Opcional: Puede 
+}
+
+/* Contenedor de la tarjeta con dimensiones fijas */
+.city-card {
+    position: relative;
+    width: 550px; /* Ancho fijado */
+    height: 280px; /* Altura fijada */
+    overflow: hidden;
+    cursor: pointer;
+    border-radius: 10px; /* Redondeo de esquinas opcional */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3); /* Sombra para dar profundidad */
+}
+
+/* Tarjeta de viaje */
+.travel-card {
+    height: 100%;
+    transition: transform 0.3s ease;
+}
+
+/* La imagen de la tarjeta */
+.card-img-top {
+    height: 100%;
+    object-fit: cover; /* Asegura que la imagen cubra el espacio sin distorsión */
+    transition: transform 0.3s ease;
+}
+
+/* La capa de información que aparecerá al pasar el cursor */
+.card-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.7); /* Fondo oscuro semitransparente */
+    color: #fff;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    text-align: center;
+}
+
+.card-header {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.card-body {
+    font-size: 1em;
+    margin-top: 0.5em;
+}
+
+/* Estilo cuando se pasa el cursor sobre la tarjeta */
+.city-card:hover .card-img-top {
+    transform: scale(1.03);
+}
+
+.city-card:hover .card-overlay {
+    opacity: 1;
+    visibility: visible;
+}
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+  }
+  
+  .footer-content {
+    margin: 0 auto;
+    padding: 20px;
+    max-width: 800px;
+  }
+  
+  footer a {
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  footer a:hover {
+    text-decoration: underline;
+  }
+  
+.mb-3 {
+    width: 350px;
+    margin-left: 550px;
+}
+
+.btn-primary{
+    margin-left: 685px;
+    margin-bottom: 10px;
+}
+
+.form-title {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 35px;
+    color: white;
+}

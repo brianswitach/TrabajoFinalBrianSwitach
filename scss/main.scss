@@ -1,0 +1,263 @@
+// Variables
+$primary-bg: rgb(34, 35, 40);
+$secondary-color: white;
+$highlight-color: rgb(255, 125, 80);
+$font-family-main: 'Montserrat', sans-serif;
+$border-color: white; // Assuming this is reused
+$skill-border-color: #53B4DF;
+$city-card-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+$footer-bg-color: #333;
+
+// Mixin for keyframes
+@mixin keyframes($name) {
+  @keyframes #{$name} {
+    @content;
+  }
+}
+
+// Mixin for animation
+@mixin animation($animation-name, $duration: 7s, $timing-function: steps(16), $iteration-count: infinite, $direction: normal) {
+  animation: $animation-name $duration $timing-function $iteration-count $direction;
+}
+
+// Base styles
+body {
+  background-color: $primary-bg;
+  color: $secondary-color;
+}
+
+.container-md {
+  margin-top: 20px;
+  margin-right: 200px;
+}
+
+.content-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 60px 200px;
+}
+
+.presentation-section {
+  flex: 1;
+}
+
+.presentation-text,
+.presentation-text-developer {
+  font-family: $font-family-main;
+  font-size: 45px;
+  color: $secondary-color;
+  margin-top: 60px;
+}
+
+.presentation-text-developer {
+  color: $highlight-color;
+}
+
+.typing-demo {
+  font-family: $font-family-main;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 3px solid $border-color;
+  font-size: 1em;
+  width: 22ch;
+  
+  // Include animation using mixin
+  @include animation(typing, 7s, steps(16), infinite, normal);
+  @include animation(blink-caret, .75s, step-end, infinite, normal);
+}
+
+@include keyframes(typing) {
+  0%, 100% { width: 0; }
+  10%, 30% { width: 16ch; }
+  40%, 60% { width: 16ch; }
+  70%, 90% { width: 16ch; }
+}
+
+@include keyframes(blink-caret) {
+  50% { border-color: transparent; }
+}
+
+.paboutme {
+  margin-top: 40px;
+  font-family: $font-family-main;
+  width: calc(50% - 40px);
+  font-size: 20px;
+  color: $secondary-color;
+  margin-left: 40px;
+}
+
+.skills-title {
+  font-family: $font-family-main;
+  font-size: 35px;
+  color: $secondary-color;
+  margin-bottom: 50px;
+}
+
+.skills-section {
+  margin: 150px 0;
+  text-align: center;
+}
+
+.skill-row {
+  display: flex;
+  justify-content: space-evenly;
+  margin-bottom: 20px;
+}
+
+.skill-icon-container {
+  position: relative;
+  display: inline-block;
+  margin: 20px 10px;
+  border: 3px solid $skill-border-color;
+  border-radius: 10px;
+  padding: 10px;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.6);
+  transition: all 0.3s ease;
+  opacity: 0; // Initially hidden
+}
+
+.skill-icon {
+  width: 100px;
+  height: auto;
+}
+
+.icon-title {
+  position: absolute;
+  bottom: -20px;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  color: $secondary-color;
+  font-family: $font-family-main;
+  font-size: 14px;
+  opacity: 0;
+  transition: opacity 0.3s ease, bottom 0.3s ease;
+  pointer-events: none;
+  background: rgba(0, 0, 0, 0.7);
+  padding: 5px 0;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.skill-icon-container:hover {
+  .icon-title {
+    opacity: 1;
+    bottom: 10px;
+  }
+  transform: translateY(-20px);
+}
+
+// Continúa con el resto de tu código CSS aquí
+
+// ... resto del código ...
+
+
+// Reuse your keyframes mixins for slideFromLeft, slideFromRight, etc.
+// Similar to how typing and blink-caret were handled above
+
+.card-container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 20px;
+  height: 100vh; // Optional: May need to adjust this based on your layout
+}
+
+.city-card {
+  position: relative;
+  width: 550px; // Fixed width
+  height: 280px; // Fixed height
+  overflow: hidden;
+  cursor: pointer;
+  border-radius: 10px; // Optional corner rounding
+  box-shadow: $city-card-shadow; // Depth shadow
+}
+
+.travel-card {
+  height: 100%;
+  transition: transform 0.3s ease;
+}
+
+.card-img-top {
+  height: 100%;
+  object-fit: cover; // Ensures the image covers the space without distortion
+  transition: transform 0.3s ease;
+}
+
+.card-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7); // Semi-transparent dark background
+  color: $secondary-color;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  text-align: center;
+}
+
+.card-header {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+.card-body {
+  font-size: 1em;
+  margin-top: 0.5em;
+}
+
+.city-card:hover {
+  .card-img-top {
+    transform: scale(1.03);
+  }
+  .card-overlay {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+footer {
+  background-color: $footer-bg-color;
+  color: $secondary-color;
+  text-align: center;
+  padding: 20px 0;
+}
+
+.footer-content {
+  margin: 0 auto;
+  padding: 20px;
+  max-width: 800px;
+}
+
+footer a {
+  color: $secondary-color;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+.mb-3 {
+  width: 350px;
+  margin-left: 550px;
+}
+
+.btn-primary {
+  margin-left: 685px;
+  margin-bottom: 10px;
+}
+
+.form-title {
+  font-family: $font-family-main;
+  font-size: 35px;
+  color: $secondary-color;
+}
