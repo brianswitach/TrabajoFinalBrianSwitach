@@ -1,0 +1,9 @@
+@mixin keyframes($name) {
+    @keyframes #{$name} {
+        @content;
+    }
+}
+
+@mixin animation($animation-name, $duration: 7s, $timing-function: steps(16), $iteration-count: infinite, $direction: normal) {
+    animation: $animation-name $duration $timing-function $iteration-count $direction;
+}

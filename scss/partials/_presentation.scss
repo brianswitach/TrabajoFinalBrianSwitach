@@ -1,0 +1,15 @@
+.presentation-section {
+    flex: 1;
+}
+
+.presentation-text,
+.presentation-text-developer {
+    font-family: $font-family-main;
+    font-size: 45px;
+    color: $secondary-color;
+    margin-top: 60px;
+}
+
+.presentation-text-developer {
+    color: $highlight-color;
+}

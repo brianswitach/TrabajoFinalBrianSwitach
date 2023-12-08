@@ -1,0 +1,17 @@
+.card-container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 20px;
+    height: 100vh;
+}
+
+.city-card {
+    position: relative;
+    width: 550px;
+    height: 280px;
+    overflow: hidden;
+    cursor: pointer;
+    border-radius: 10px;
+    box-shadow: $city-card-shadow;
+}
