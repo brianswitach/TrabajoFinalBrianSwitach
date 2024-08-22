@@ -1,0 +1,220 @@
+body {
+    background-image: url('/reservadevuelos/img/fondo3.jpeg'); 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: white;
+    height: 455px;
+
+}
+
+.container {
+    background: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 15px;
+    margin-top: 50px;
+    width: 350px;
+}
+
+h1 {
+    margin-bottom: 20px;
+}
+
+/* ... (tu código existente) ... */
+
+.cities-container .city-card {
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Sombra para darle profundidad */
+    transition: transform 0.3s ease; /* Transición para efecto al pasar el mouse */
+    margin-left: 10px;
+    margin-top: 35px;
+}
+
+.cities-container .city-card:hover {
+    transform: translateY(-5px); /* Eleva la tarjeta al pasar el mouse */
+}
+
+.city-image {
+    height: 200px; /* Altura fija para todas las tarjetas */
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.city-info {
+    background: rgba(0, 0, 0, 0.7); /* Fondo oscuro para el texto */
+    color: white;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 10px;
+}
+
+.city-name {
+    font-size: 18px;
+    margin: 0;
+}
+
+.city-price {
+    font-size: 20px;
+    font-weight: bold;
+    margin: 0;
+}
+
+.city-from {
+    font-size: 14px;
+    margin: 0;
+}
+
+.cards-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    max-width: 1200px;
+    margin: auto;
+}
+.card-1, .card-2, .card-3, .card-4 {
+    background-color: #edeeef;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    padding: 30px;
+    border-radius: 8px;
+    transition: transform 0.3s ease-in-out;
+    height: 400px;
+    width: 275px;
+}
+.card-1:hover, .card-2:hover, .card-3:hover, .card-4:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}
+@media (max-width: 1200px) {
+    .cards-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media (max-width: 768px) {
+    .cards-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+.card-5, .card-6, .card-7, .card-8 {
+    background-color: #edeeef;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    padding: 30px;
+    border-radius: 8px;
+    transition: transform 0.3s ease-in-out;
+    height: 450px;
+    width: 275px;
+    
+
+    /* Código para el gradiente animado */
+    background: linear-gradient(270deg,#f7f8f8, #ededf1, #b6b9c3);
+    background-size: 1200% 1200%;
+    -webkit-animation: AnimationName 8s ease infinite;
+    -moz-animation: AnimationName 8s ease infinite;
+    animation: AnimationName 8s ease infinite;
+}
+
+.card-5:hover, .card-6:hover, .card-7:hover, .card-8:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}
+
+/* Definiciones de la animación */
+@-webkit-keyframes AnimationName {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+@-moz-keyframes AnimationName {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+@keyframes AnimationName {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+
+.card-visible {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+
+
+
+
+.container2 {
+    max-width: 600px;
+    margin: auto;
+    padding: 15px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-control {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+}
+
+.btn-primary2 {
+    background-color: #ffffff;
+    border-color: #000000;
+    color: rgb(0, 0, 0);
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-left: 240px;
+}
+
+.btn-primary2:hover {
+    background-color: #8e93a2;
+    border-color: black;
+}
+
+footer {
+    background-color: #f8f9fa; /* Cambia esto al color de fondo deseado */
+    padding: 20px 0;
+    text-align: center;
+}
+
+footer .container {
+    max-width: 1170px; /* O el ancho que prefieras */
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+footer a {
+    text-decoration: none;
+    color: #333; /* Cambia esto al color de texto deseado */
+    margin: 0 10px;
+    font-weight: 600;
+}
+
+footer a:hover {
+    color: #0062cc; /* Cambia esto al color de hover deseado */
+}
+
+footer span {
+    color: #333; /* Cambia esto al color de texto deseado */
+    margin-right: 15px;
+}
+
+
+

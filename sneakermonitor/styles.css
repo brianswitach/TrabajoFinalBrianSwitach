@@ -1,0 +1,48 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f0f0;
+}
+
+.site-header {
+    background: linear-gradient(to right, #627078, #a8b3b8); 
+    padding: 20px;
+    text-align: center;
+}
+
+.title {
+    font-size: 3em;
+    color: #e4e8e9;
+    background-clip: text;
+    -webkit-background-clip: text;
+    font-family: 'Poppins', sans-serif;
+}
+
+.content-section {
+    margin-top: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.content-section img {
+    max-width: 45%;
+    height: auto;
+    transition: opacity 1s ease-in-out;
+}
+
+.content-section .text {
+    width: 45%;
+    transition: opacity 1s ease-in-out;
+}
+
+.fade-in {
+    opacity: 1;
+}
+
+.destacado {
+    font-weight: bold;
+    color: #0056b3; /* Cambia este código de color por el que mejor se adapte a tu diseño */
+  }
+  

@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reserva de E-Tickets para Vuelos</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,300&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Ephesis&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h1 class="text-center">Reserva tu Vuelo</h1>
+        <form id="reservationForm">
+            <!-- Aquí van los campos del formulario -->
+            <div class="form-group">
+                <label for="origin">Origen:</label>
+                <input type="text" class="form-control" id="origin" required>
+            </div>
+            <div class="form-group">
+                <label for="destination">Destino:</label>
+                <input type="text" class="form-control" id="destination" required>
+            </div>
+            <div class="form-group">
+                <label for="date">Fecha de Vuelo:</label>
+                <input type="date" class="form-control" id="date" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Buscar Vuelos</button>
+        </form>
+    </div>
+
+<div class="cities-container row">
+    <!-- Contenedor de la ciudad 1 -->
+    <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+        <div class="city-card">
+            <div class="city-image" style="background-image: url('/reservadevuelos/img/riodejaneiro2.jpeg'); margin-left: 20px;">
+                <div class="city-info">
+                    <h3 class="city-name">Río de Janeiro</h3>
+                    <p class="city-price">$ 152.397</p>
+                    <p class="city-from">Desde Buenos Aires</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contenedor de la ciudad 2 (nueva tarjeta) -->
+    <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+        <div class="city-card">
+            <div class="city-image" style="background-image: url('/reservadevuelos/img/paris.jpeg');"> <!-- Asegúrate de cambiar la imagen de fondo -->
+                <div class="city-info">
+                    <h3 class="city-name">Paris</h3>
+                    <p class="city-price">$ 739.384</p>
+                    <p class="city-from">Desde Buenos Aires</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+        <div class="city-card">
+            <div class="city-image" style="background-image: url('/reservadevuelos/img/miami.jpeg'); margin-right: 20px;"> <!-- Asegúrate de cambiar la imagen de fondo -->
+                <div class="city-info">
+                    <h3 class="city-name">Miami</h3>
+                    <p class="city-price">$ 652.583</p>
+                    <p class="city-from">Desde Buenos Aires</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+ <!-- Aca terminan los primeros 3 -->
+
+ 
+
+
+ <section style="height: 720px; background-color: #edeeef; padding: 50px;">
+    <h1 style="background-color: #edeeef; color: black; margin-bottom: 60px; margin-left: 500px; font-family: 'DM Sans', sans-serif;">¿Por qué elegirnos?</h1>
+    <div class="cards-container" style="color: black;">
+        <div class="card-1">
+            <h2 style="color: #40434c;">Rapidez y Confiabilidad</h2>
+            <p>Reserva tu vuelo en segundos con nuestro sistema de alta eficiencia y viaja con la tranquilidad de contar con una aerolínea que pone tu seguridad por encima de todo. No más esperas, solo destinos al alcance de un clic.</p>
+        </div>
+        <div class="card-2">
+            <h2 style="color: #40434c;">Atención Personalizada</h2>
+            <p>Desde el momento en que planeas tu viaje hasta tu llegada, nuestro equipo dedicado te brindará asistencia personal para asegurar una experiencia de vuelo que supere tus expectativas. Estamos contigo, en cada etapa del viaje.</p>
+        </div>
+        <div class="card-3">
+            <h2 style="color: #40434c;">Mejores Precios Garantizados</h2>
+            <p>Ofrecemos acceso exclusivo a ofertas y descuentos, asegurándote los mejores precios del mercado. Viaja más por menos y descubre la forma más inteligente de explorar el mundo sin sacrificar calidad ni servicio.</p>
+        </div>
+        <div class="card-4">
+            <h2 style="color: #40434c;">Amplia Red Personalizada</h2>
+            <p>Con nuestra extensa selección de rutas, puedes elegir entre una amplia gama de destinos nacionales e internacionales. Ya sea una escapada de fin de semana o el viaje de tus sueños, te llevamos donde tu corazón desee explorar.</p>
+        </div>
+    </div>
+ </section>
+
+ <section style="background-color: #b6b9c3; padding: 20px; height: 1400px;">
+    <h1 style="font-family: 'DM Sans', sans-serif; text-align: center; margin-bottom: 20px; color: #333;">Destacados del Mes</h1>
+    
+    <div style="display: flex; flex-wrap: wrap; justify-content: space-around;">
+        <div style="text-align: center; margin: 10px;">
+            <img src="/reservadevuelos/img/londres.jpg" style="width: 530px; height: 325px; margin: 10px; box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); transition: transform 0.3s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+            <p style="font-family: 'DM Sans', sans-serif; color: #333; font-size: 20px">Londres</p>
+        </div>
+        <div style="text-align: center; margin: 10px;">
+            <img src="/reservadevuelos/img/amsterdam.jpg" style="width: 530px; height: 325px; margin: 10px; box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); transition: transform 0.3s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+            <p style="font-family: 'DM Sans', sans-serif; color: #333; font-size: 20px">Amsterdam</p>
+        </div>
+        <div style="text-align: center; margin: 10px;">
+            <img src="/reservadevuelos/img/losangeles.jpg" style="width: 530px; height: 325px; margin: 10px; box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); transition: transform 0.3s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+            <p style="font-family: 'DM Sans', sans-serif; color: #333; font-size: 20px">Los Angeles</p>
+        </div>
+        <div style="text-align: center; margin: 10px;">
+            <img src="/reservadevuelos/img/newyork.jpg" style="width: 530px; height: 325px; margin: 10px; box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); transition: transform 0.3s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+            <p style="font-family: 'DM Sans', sans-serif; color: #333; font-size: 20px;">New York</p>
+        </div>
+        <div style="text-align: center; margin: 10px;">
+            <img src="/reservadevuelos/img/barcelona.jpg" style="width: 530px; height: 325px; margin: 10px; box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); transition: transform 0.3s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+            <p style="font-family: 'DM Sans', sans-serif; color: #333; font-size: 20px">Barcelona</p>
+        </div>
+        <div style="text-align: center; margin: 10px;">
+            <img src="/reservadevuelos/img/roma.jpg" style="width: 530px; height: 325px; margin: 10px; box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); transition: transform 0.3s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+            <p style="font-family: 'DM Sans', sans-serif; color: #333; font-size: 20px">Roma</p>
+        </div>
+    </div>
+</section>
+
+
+<section style="height: 770px; background-color: #ffffff; padding: 50px;">
+    <h1 style="background-color: #ffffff; color: black; margin-bottom: 60px; margin-left: 630px; font-family: 'DM Sans', sans-serif;">FAQ</h1>
+    <div class="cards-container" style="color: black;">
+        <div class="card-5">
+            <h2 style="background: linear-gradient(to right, #8e93a2, #707687, #5b606e); -webkit-background-clip: text; background-clip: text;  color: transparent;">¿Cómo puedo reservar un vuelo en su sitio web?</h2>
+            <p>Reserva tu vuelo fácilmente con nuestro sistema en línea. Solo ingresa tus destinos de salida y llegada, selecciona tus fechas de viaje y elige entre las opciones de vuelos disponibles.</p>
+        </div>
+        <div class="card-6">
+            <h2 style="background: linear-gradient(to right, #8e93a2, #707687, #5b606e); -webkit-background-clip: text; background-clip: text;  color: transparent;">¿Ofrecen reembolsos en caso de cancelación?</h2>
+            <p>Sí, ofrecemos reembolsos según las condiciones de tu tarifa. Las tarifas flexibles permiten cancelaciones gratuitas, mientras que otras tarifas pueden incluir cargos por cancelación.</p>
+        </div>
+        <div class="card-7">
+            <h2 style="background: linear-gradient(to right, #8e93a2, #707687, #5b606e); -webkit-background-clip: text; background-clip: text;  color: transparent;">¿Qué hago si mi vuelo se retrasa o cancela?</h2>
+            <p>En caso de retrasos o cancelaciones, te notificaremos a través de tu email o teléfono móvil. También proporcionamos información actualizada en nuestro sitio web y app móvil.</p>
+        </div>
+        <div class="card-8">
+            <h2 style="background: linear-gradient(to right, #8e93a2, #707687, #5b606e); -webkit-background-clip: text; background-clip: text;  color: transparent;">¿Cómo puedo contactar con el servicio de atención al cliente?</h2>
+            <p>Puedes contactarnos a través de nuestro formulario en línea, por teléfono o email. Los detalles de contacto están disponibles en nuestra página de "Contáctanos".</p>
+        </div>
+    </div>
+ </section>
+
+   <section style="height: 740px; background-color: #8e93a2; padding: 70px;">
+    <div class="container2" style="margin-top: 45px;">
+        <h2 style="text-align: center; margin-bottom: 30px; font-family: 'DM Sans', sans-serif; text-align: center; margin-bottom: 20px; color: #333; padding: 10px; font-weight: bold; font-size: 35px;">Contáctanos</h2>
+        <form action="/tu-endpoint-de-envio" method="post">
+            <div class="form-group">
+                <label for="nombre" style="color: #000000; font-family: 'DM Sans', sans-serif;">Nombre:</label>
+                <input type="text" class="form-control" id="nombre" name="nombre" required>
+            </div>
+            <div class="form-group">
+                <label for="email" style="color: #000000; font-family: 'DM Sans', sans-serif;">Email:</label>
+                <input type="email" class="form-control" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="mensaje" style="color: #000000; font-family: 'DM Sans', sans-serif;">Mensaje:</label>
+                <textarea class="form-control" id="mensaje" name="mensaje" rows="4" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary2">Enviar</button>
+        </form>
+    </div>
+   </section>
+
+   <section>
+    <footer style="background-color: #8e93a2; padding: 20px 0; text-align: center;">
+            <span style="font-family: 'DM Sans', sans-serif; font-size: 20px;">© 2023. Todos los derechos reservados.</span>
+            <div style="margin-top: 8px;">
+                <a style="margin-right: 15px; color: black;">Términos y condiciones</a>
+                <a style="margin-right: 15px; color: black;">Política de privacidad</a>
+                <a style="color: black;">Contacto</a>
+            </div>
+    </footer>    
+</section>
+   
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

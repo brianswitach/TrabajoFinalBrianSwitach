@@ -13,6 +13,7 @@
     <!-- Vinculación del CSS de Bootstrap -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="dist/main.css">
     <title>Brian Switach - Full Stack Developer</title>
     <script src="../js/main.js"></script>
 </head>
@@ -22,7 +23,6 @@
         <!-- Navbar de Bootstrap -->
         <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: rgb(34, 35, 40);">
             <div class="container-md">
-                <a class="navbar-brand" href="#">Brian Switach</a>
             </div>
         </nav>
     </header>
@@ -46,7 +46,7 @@
 &nbsp;
         <!-- Sección de Habilidades -->
         <section class="skills-section">
-            <h2 class="skills-title">Habilidades</h2>
+            <h2 class="skills-title">Habilites</h2>
             <div class="skill-row">
                 <div class="skill-icon-container">
                     <img src="/icons/html3.png" alt="HTML Icon - Habilidades en HTML" class="skill-icon">
@@ -71,7 +71,7 @@
                         <div class="icon-title">Git</div>
                     </div>
                     <div class="skill-icon-container">
-                        <img src="/icons/github.png" alt="Github Icon - Habilidades en Github" class="skill-icon">
+                        <img src="/icons/github2.png" alt="Github Icon - Habilidades en Github" class="skill-icon">
                         <div class="icon-title">Github</div>
                     </div>
                     <div class="skill-icon-container">
@@ -93,24 +93,27 @@
                             <div class="icon-title">React JS</div>
                         </div>
                         <div class="skill-icon-container">
-                            <img src="/icons/nodejs.png" alt="Node JS Icon - Habilidades en Node JS" class="skill-icon">
+                            <img src="/icons/nodejs2.png" alt="Node JS Icon - Habilidades en Node JS" class="skill-icon">
                             <div class="icon-title">Node JS</div>
                         </div>
                         <div class="skill-icon-container">
-                            <img src="/icons/mysql2.png" alt="MySQL Icon - Habilidades en MySQL" class="skill-icon">
+                            <img src="/icons/mysql3.png" alt="MySQL Icon - Habilidades en MySQL" class="skill-icon">
                             <div class="icon-title">MySQL</div>
                         </div>
                     </div>
 </section>
 
-<section>
-    <h4 class="skills-title" style="margin-left: 550px;">Proyectos realizados</h4>
-</section>
+
+<div style="background-color: #d8dadf; padding-top: 40px;"> 
 
 <section>
+    <h4 class="skills-title" style="margin-left: 640px; color: black;">Projects</h4>
+</section>
+
+<section style="background-color: #d8dadf;">
 <div class="card-container">
     <div class="city-card" style="margin-left: 50px !important;">
-        <div class="travel-card">
+        <div class="travel-card" id="miContainer2">
             <img src="../img/reservadevuelos.png" alt="Proyecto Reserva de Vuelos - Landing page para vuelos" class="card-img-top">
             <div class="card-overlay">
                 <div class="card-header">Reserva de Vuelos</div>
@@ -119,8 +122,8 @@
         </div>
     </div>
     <div class="city-card" style="margin-left: 190px !important;">
-        <div class="travel-card">
-            <img src="../img/coffee.png" alt="Proyecto Coffee Shop - Página para compra de café" class="card-img-top">
+        <div class="travel-card" id="miContainer">
+            <img src="../img/barista2.png" alt="Proyecto Coffee Shop - Página para compra de café" class="card-img-top">
             <div class="card-overlay">
                 <div class="card-header">Coffee Shop</div>
                 <div class="card-body">Pagina diseñada para vuelos, destacando por su diseño claro y
@@ -129,31 +132,111 @@
         </div>
     </div>
 </div>
+
+<section>
+    <div class="card-container">
+        <!-- Nueva Tarjeta de Viaje 1 -->
+        <div class="city-card" style="margin-left: 50px !important;">
+            <div class="travel-card" id="sneakerMonitor">
+                <img src="/img/sneak3ermonitor.jpg" alt="Proyecto 3 - Descripción del proyecto 3" class="card-img-top">
+                <div class="card-overlay">
+                    <div class="card-header">Sneaker Monitor</div>
+                    <div class="card-body">"Sneaker Monitor" informa sobre lanzamientos y ediciones especiales de zapatillas, manteniendo a los usuarios actualizados con alertas en tiempo real.</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Nueva Tarjeta de Viaje 2 -->
+        <div class="city-card" style="margin-left: 190px !important;">
+            <div class="travel-card" id="reservas">
+                <img src="/img/reservas.png" alt="Reservas - Gestor de Reservas" class="card-img-top">
+                <div class="card-overlay">
+                    <div class="card-header">Reservas</div>
+                    <div class="card-body">Aplicacion para gestionar reservas de un restaurant</div>
+                </div>
+            </div>
+        </div>
+    </div>
 </section>
+
+<section>
+    <div class="card-container">
+        <!-- Nueva Tarjeta de Viaje 1 -->
+        <div class="city-card" style="margin-left: 50px !important;">
+            <div class="travel-card" id="laymov">
+                <img src="/img/laymov.jpeg" alt="Proyecto 3 - Descripción del proyecto 3" class="card-img-top">
+                <div class="card-overlay">
+                    <div class="card-header">LayMov</div>
+                    <div class="card-body">LayMov te permite explorar y descubrir películas según tus preferencias, es una herramienta indispensable adaptada a tus gustos y necesidades.
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Nueva Tarjeta de Viaje 2 -->
+        <div class="city-card" style="margin-left: 190px !important;">
+            <div class="travel-card" id="reservas">
+                <img src="/img/working.jpeg" alt="Reservas - Gestor de Reservas" class="card-img-top">
+                <div class="card-overlay">
+                    <div class="card-header"></div>
+                    <div class="card-body"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+</div>
+
+</section>
+
+<script>
+    document.getElementById('miContainer').addEventListener('click', function() {
+        window.location.href = '/coffeeshop/index.html';
+    });
+    document.getElementById('miContainer2').addEventListener('click', function() {
+        window.location.href = '/reservadevuelos/index.html';
+    });
+    document.getElementById('sneakerMonitor').addEventListener('click', function() {
+        window.location.href = '/sneakermonitor/index.html';
+    });
+    document.getElementById('reservas').addEventListener('click', function() {
+        window.location.href = 'https://65786486e7e6096498e8ba90--zingy-wisp-7af036.netlify.app/';
+    }); 
+    document.getElementById('laymov').addEventListener('click', function() {
+        window.location.href = '/laymov/index.html';
+    });
+</script>
+
     </main> 
 
-    <section>
+    <section style="margin-top: 150px;">
         <h5 class="form-title" style="margin-left: 525px; margin-bottom: 40px;">Formulario de contacto</h5>
+        <h6 style="font-family: 'Montserrat', sans-serif;
+        font-size: 20px; margin-left: 500px;
+        color: white; margin-bottom: 30px; color: #c6d8ab;">Send me an email here > brianswitach@gmail.com</h6>
         <form>
             <div class="mb-3">
               <label for="exampleInputEmail1" class="form-label">Nombre</label>
-              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" alt="name">
+              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" alt="name" style="background-color: #ffffff;">
               <div id="emailHelp" class="form-text"></div>
             </div>
             <div class="mb-3">
                 <label for="exampleInputEmail1" class="form-label">Email</label>
-                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" alt="name">
+                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" alt="name" style="background-color: #ffffff;">
                 <div id="emailHelp" class="form-text"></div>
               </div>
             <div class="mb-3">
                 <label for="exampleInputEmail1" class="form-label">Mensaje</label>
-                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" alt="name">
+                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" alt="name" style="background-color: #ffffff;">
                 <div id="emailHelp" class="form-text"></div>
              </div>
-            <button type="submit" class="btn btn-primary">Enviar</button>
+             <button type="submit" class="btn btn-primary jello-diagonal" style="margin-bottom: 250px; border-color: #ffffff; width: 125px; margin-left: 660px; margin-top: 10px;">
+                Enviar
+              </button>          
           </form>
     </section>
-
+      
 
 <section>
     <footer>

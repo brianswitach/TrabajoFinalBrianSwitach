@@ -1,0 +1,195 @@
+body, html {
+  height: 100%;
+  margin: 0;
+}
+
+#backgroundImage::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5); /* Controla la opacidad aquí */
+  min-width: 100%;
+  min-height: 100%;
+  z-index: 1; /* Sobre la imagen de fondo, pero debajo de los contenidos del body */
+}
+
+#backgroundImage {
+  position: relative; /* Esto es necesario para posicionar correctamente el pseudo-elemento */
+  min-width: 100%; 
+  min-height: 100%;
+  background-image: url('../img/barista.jpg');
+  background-size: cover;
+  z-index: -1; /* La imagen de fondo detrás de todos los elementos */
+}
+
+
+.info-section {
+  position: absolute;
+  top: 30%; /* Ajusta la posición vertical como prefieras */
+  left: 5%; /* Ajusta la posición horizontal como prefieras */
+  color: white; /* El color del texto */
+  z-index: 2; /* Asegura que el texto esté encima del fondo */
+}
+
+h1 {
+  font-size: 2.5em; /* Tamaño del título */
+}
+
+p {
+  font-size: 1.2em; /* Tamaño de la descripción */
+  max-width: 400px; /* Ajusta el ancho máximo del texto */
+}
+
+.btn-outline-success {
+  font-size: 1em;
+  color: #28a745; /* Ajusta el color del texto del botón */
+  border-color: #28a745; /* Ajusta el color del borde del botón */
+}
+
+.btn-outline-success:hover {
+  background-color: #28a745; /* Ajusta el color de fondo al pasar el mouse */
+  color: white; /* Ajusta el color del texto al pasar el mouse */
+}
+
+.navbar {
+  z-index: 1000;
+  margin-top: 10px;
+  margin-left: 230px;
+  margin-right: 50px;
+  width: calc(85% - 250px);
+  background: linear-gradient(45deg, #3e2c1b, #6f4e37, #a67b5b, #d3b8a3); /* Gradiente con varios tonos de café */
+  border-radius: 25px;
+  font-family: 'Montserrat', sans-serif; /* Aplicando la fuente Montserrat */
+  font-weight: 300;
+  border-color: white;
+}
+
+.navbar-nav {
+  width: 100%;
+  justify-content: space-around; /* Distribución uniforme de los elementos */
+}
+
+.navbar-brand, .nav-link {
+  font-family: 'Playfair Display', serif; /* Aplicando la fuente Playfair Display */
+}
+
+.navbar-nav .nav-item .nav-link {
+  color: #6f4e37; /* Color café */
+  border-radius: 10px;
+  transition: background-color 0.3s, color 0.3s; /* Transiciones suaves */
+}
+
+.navbar-nav .nav-item .nav-link:hover, .navbar-nav .nav-item .nav-link:focus {
+  background-color: #6f4e37; /* Color café al pasar el mouse */
+  color: white;
+}
+
+.content {
+  position: fixed;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5); /* Fondo semi-transparente */
+  color: white;
+  width: 100%;
+  padding: 20px;
+}
+
+.section {
+  margin-top: 20px;
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.5); /* Secciones semi-transparentes */
+}
+
+.image-container {
+  display: flex;
+  justify-content: center; /* Centra las imágenes y títulos horizontalmente */
+  padding: 20px 0; /* Espacio arriba y abajo del contenedor */
+}
+
+.image-item {
+  margin: 0 20px; /* Espaciado horizontal entre los ítems de imagen y título */
+  text-align: center; /* Centra el texto de los títulos bajo las imágenes */
+}
+
+.image-item img {
+  height: 200px; /* Altura fija para todas las imágenes */
+  width: auto; /* El ancho se ajusta automáticamente para mantener la proporción */
+  margin-bottom: 10px; /* Espacio entre la imagen y el título */
+}
+
+.image-item h4 {
+  font-size: 18px; /* Tamaño de fuente para los títulos */
+  font-family: 'EB Garamond', serif; /* Fuente para los títulos, ajusta según sea necesario */
+  color: #333; /* Color del texto de los títulos, ajusta según sea necesario */
+}
+
+
+.image-container img {
+  height: 350px; /* Aumenta la altura para todas las imágenes */
+  width: 350px; /* Aumenta la anchura para todas las imágenes */
+  margin: 0 20px; /* Aumenta el espaciado horizontal entre las imágenes */
+  margin-top: 40px;
+}
+
+#sectionimages {
+  display: flex;
+  justify-content: center; /* Centra las imágenes horizontalmente */
+  align-items: center; /* Alinea las imágenes verticalmente */
+  height: 800px; /* O ajusta la altura según sea necesario */
+  gap: 20px; /* Espacio entre las imágenes */
+}
+
+#sectionimages img {
+  height: auto; /* Mantén la altura automática para conservar la proporción */
+  width: 33%; /* Ajusta el ancho al 33% para que tres imágenes llenen la fila */
+}
+
+.contact-section {
+  background-color: #f5f5f5; /* Color de fondo claro para el formulario de contacto */
+  padding: 40px 0; /* Espacio arriba y abajo del formulario */
+}
+
+.contact-section h2 {
+  color: #6f4e37; /* Color que combina con el tema de café */
+}
+
+
+footer {
+  background-color: #f8f9fa; /* Cambia esto al color de fondo deseado */
+  padding: 20px 0;
+  text-align: center;
+}
+
+footer .container {
+  max-width: 1170px; /* O el ancho que prefieras */
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+footer a {
+  text-decoration: none;
+  color: #333; /* Cambia esto al color de texto deseado */
+  margin: 0 10px;
+  font-weight: 600;
+}
+
+footer a:hover {
+  color: #0062cc; /* Cambia esto al color de hover deseado */
+}
+
+footer span {
+  color: #333; /* Cambia esto al color de texto deseado */
+  margin-right: 15px;
+}
+
+
+
+
+
+ 
+
+
+

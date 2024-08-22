@@ -32,3 +32,18 @@ document.addEventListener('scroll', function () {
         }
     });
 });
+
+document.addEventListener('DOMContentLoaded', function () {
+    var btn = document.querySelector('.btn-primary');
+  
+    setInterval(function () { // Establece un intervalo para aplicar la animación cada 5 segundos
+      btn.classList.add('jello-diagonal');
+    }, 3000);
+  
+    btn.addEventListener('animationend', function () { // Escucha el final de la animación para quitar la clase
+      btn.classList.remove('jello-diagonal');
+    });
+  });
+  
+
+
